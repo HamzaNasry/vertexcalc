@@ -43,9 +43,12 @@ body {
 
 .button:hover {
     cursor: pointer;
-    background-color: white;
-    color: black;
-    animation: rainbow 2s infinite; /* Add rainbow animation only when button is hovered over */
+    background-color: rgb(255, 255, 255);
+    animation: rainbow 6s infinite; /* Add rainbow animation to border and text */
+}
+
+.button:hover span {
+    animation: rainbow 6s infinite; /* Apply rainbow animation to the span containing the button text */
 }
 
 .title {
@@ -60,15 +63,15 @@ body {
 }
 
 @keyframes rainbow {
-    0% { border-color: red; }
-    10% { border-color: orange; }
-    20% { border-color: yellow; }
-    30% { border-color: lime; }
-    40% { border-color: aqua; }
-    50% { border-color: blue; }
-    60% { border-color: purple; }
-    70% { border-color: pink; }
-    80% { border-color: magenta; }
-    90% { border-color: crimson; }
-    100% { border-color: red; }
+    0% { border-color: red; color: red; }
+    10% { border-color: orange; color: orange; }
+    20% { border-color: yellow; color: yellow; }
+    30% { border-color: lime; color: lime; }
+    40% { border-color: aqua; color: aqua; }
+    50% { border-color: blue; color: blue; }
+    60% { border-color: purple; color: purple; }
+    70% { border-color: pink; color: pink; }
+    80% { border-color: magenta; color: magenta; }
+    90% { border-color: crimson; color: crimson; }
+    100% { border-color: red; color: red; }
 }

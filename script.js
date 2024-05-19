@@ -9,7 +9,7 @@ function calculateVertex() {
     result.textContent = '';
 
     // Regular expression to match common forms of quadratic equations
-    const regex = /([+-]?\d*\.?\d*)?x\^2\s*([+-]\s*\d*\.?\d*)?x\s*([+-]\s*\d*\.?\d*)?/;
+    const regex = /^([+-]?\d*\.?\d*)?x\^2\s*([+-]?\d*\.?\d*)?x?\s*([+-]?\d*\.?\d*)?$/;
     const matches = input.match(regex);
 
     if (!matches) {
@@ -29,12 +29,11 @@ function calculateVertex() {
     const h = -b / (2 * a);
     const k = a * h ** 2 + b * h + c;
 
-    result.textContent = `The vertex of the quadratic function is: (${h.toFixed(2)}, ${k.toFixed(2)})`;
-
-    // Revert button text after a short delay
+    // Revert button text and display result after a short delay
     setTimeout(function() {
-        button.textContent = 'Calculate';
-    }, 2000);
+        button.textContent = 'Calculate Vertex';
+        result.innerHTML = `The vertex of the quadratic function is:<br>(${h.toFixed(2)}, ${k.toFixed(2)})`;
+    }, 2500);
 }
 
 // Add an event listener to the input field to clear the error message when the user starts typing
