@@ -33,7 +33,7 @@ function calculateVertex() {
     setTimeout(function() {
         button.textContent = 'Calculate Vertex';
         result.innerHTML = `The vertex of the quadratic function is:<br>(${h.toFixed(2)}, ${k.toFixed(2)})`;
-    }, 2500);
+    }, 1500);
 }
 
 // Add an event listener to the input field to clear the error message when the user starts typing
